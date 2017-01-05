@@ -25,13 +25,16 @@ project(ubertooth_all)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules
 	CACHE STRING "CMake module path")
 
+# set build type to release
+set(CMAKE_BUILD_TYPE "Release")
+
 set(MAJOR_VERSION 0 CACHE INT "libUbertooth major version number")
 set(MINOR_VERSION 3 CACHE INT "libUbertooth minor version number")
 set( VERSION ${MAJOR_VERSION}.${MINOR_VERSION} )
 add_definitions( -DVERSION="${VERSION}" )
 
 # Comment the following out for releases.
-set(CMAKE_C_FLAGS "$ENV{CFLAGS}" CACHE STRING "C Flags")
+#set(CMAKE_C_FLAGS "$ENV{CFLAGS}" CACHE STRING "C Flags")
 
 # Defaults: BUILD_SHARED=ON, BUILD_STATIC=OFF
 set(BUILD_SHARED_LIB ON CACHE BOOL "Build shared library")
